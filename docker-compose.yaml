@@ -1,0 +1,10 @@
+version: "3.7"
+
+services:
+  store:
+    image: "europe-docker.pkg.dev/alif-iac/eu.gcr.io/next-ecommerce:${APP_VERSION}"
+    build: ./
+    environment:
+      - RUN_MODE="production"
+    ports:
+      - 3000:3000
